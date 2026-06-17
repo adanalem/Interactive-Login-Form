@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <style>
+        
+@keyframes happyJump {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(-30px); }
+}
+
+.panda-smile {
+    width: 40px !important;
+    height: 20px !important;
+    border-radius: 0 0 15px 15px !important;
+}
+    </style>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+<script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+    <title>Neon Login</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    
+    
+</head>
+
+<body class="bg-[#0f172a] min-h-screen flex items-center justify-center">
+
+    <div
+        class="bg-gray-900 p-8 rounded-2xl flex flex-col gap-5 shadow-[0_0_20px_rgba(139,92,246,0.3)] border border-purple-500/30 w-full max-w-sm">
+
+        <div id="mascot-container" class="flex justify-center mb-8">
+    <div class="relative  " id="head2">
+
+       <div class="relative">
+    <div id="ear-l" class="absolute -top-1 -left-4 w-10 h-10 bg-gray-100 rounded-full"></div>
+    <div id="ear-r" class="absolute -top-1 -right-4 w-10 h-10 bg-gray-100 rounded-full"></div>
+
+    <div id="head" class="relative z-10 w-32 h-28 bg-white border-4 border-gray-900 rounded-[2.8rem] flex flex-col items-center justify-center shadow-xl">
+        
+        <div class="flex gap-3 mt-2">
+            <div class="w-10 h-12 bg-gray-900 rounded-full rotate-[15deg] flex items-center justify-center">
+                <div id="eye-l" class="w-2.5 h-2.5 bg-white rounded-full transition-all duration-75"></div>
+            </div>
+
+            <div class="w-10 h-12 bg-gray-900 rounded-full -rotate-[15deg] flex items-center justify-center">
+                <div id="eye-r" class="w-2.5 h-2.5 bg-white rounded-full transition-all duration-75"></div>
+            </div>
+        </div>
+
+        <div id="mouth" class="w-4 h-2 bg-gray-900 rounded-full mt-3 relative transition-all duration-300">
+            <div id="tongue" class="absolute top-1 left-1/2 -translate-x-1/2 w-4 h-5 bg-pink-500 rounded-b-full scale-0 transition-all duration-300 origin-top"></div>
+        </div>
+    </div>
+</div>
+    </div>
+</div>
+
+        <form id="login" class="flex flex-col gap-5">
+            <h2 class="text-white text-2xl font-bold text-center mb-2 tracking-widest uppercase">Login</h2>
+
+            <div class="flex flex-col gap-2">
+                <label for="email" class="text-purple-400 text-xs font-bold uppercase ml-1">Username</label>
+                <input type="text" id="email" autocomplete="username"  placeholder="Enter username"
+                    class="bg-gray-800 border border-gray-700 text-white p-3 rounded-lg focus:outline-none focus:border-cyan-400 focus:shadow-[0_0_15px_rgba(34,211,238,0.5)] transition-all">
+            </div>
+
+            <div class="flex flex-col gap-2">
+                <label for="password" class="text-purple-400 text-xs font-bold uppercase ml-1">Password</label>
+                <input type="password" id="password" autocomplete="current-password" placeholder="••••••••"
+                    class="bg-gray-800 border border-gray-700 text-white p-3 rounded-lg ...">
+
+            </div>
+
+            <button id="mybutton"
+                class="mt-4 bg-transparent border-2 border-cyan-400 text-cyan-400 font-bold py-3 rounded-lg hover:bg-cyan-400 hover:text-black hover:shadow-[0_0_25px_rgba(34,211,238,0.8)] transition-all duration-300 uppercase tracking-tighter">
+                Enter System
+            </button>
+        </form>
+    </div>
+    <script src="app.js"></script>
+</body>
+
+</html>
